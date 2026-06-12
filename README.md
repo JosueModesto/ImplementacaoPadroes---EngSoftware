@@ -57,4 +57,43 @@ Dessa forma, foi possível demonstrar o funcionamento do padrão Observer, no qu
 
 # 2 Padrão - Criacional
 
-O padrão criacional escolhido foi o Factory Method, que é um padrão de projeto que fornece uma interface para criar objetos em uma superclasse, mas permite que as subclasses alterem o tipo de objetos que serão criados.
+O padrão criacional escolhido foi o Factory Method, que é um padrão de projeto que fornece uma interface para criar objetos em uma superclasse, mas permite que as subclasses alterem o tipo de objetos que serão criados. Dessa forma, o código cliente não precisa conhecer os detalhes de criação dos objetos, tornando o sistema mais flexível e facilitando a manutenção e expansão da aplicação.
+
+# Problema e Solução
+
+O problema proposto consiste em uma loja da Nike que comercializa diferentes tipos de produtos, como tênis, camisetas e shorts. Cada produto possui características próprias e é representado por uma classe específica.
+Para resolver esse problema, foi utilizado o padrão Factory Method. Em vez de o código cliente criar diretamente os produtos, ele utiliza fábricas responsáveis pela criação de cada tipo de produto. Dessa forma, a lógica de criação fica centralizada nas fábricas, reduzindo o acoplamento entre as classes. Cada fábrica concreta é responsável por criar um produto específico da Nike. Assim, caso seja necessário adicionar novos produtos futuramente, basta criar uma nova fábrica e uma nova classe de produto, sem alterar o código já existente.
+
+# Implementação
+
+A implementação do padrão de projeto Factory Method foi realizada em TypeScript.
+
+Para auxiliar no entendimento e na implementação do padrão Factory Method, foi utilizado como base o exemplo disponibilizado pelo Refactoring Guru:
+
+https://refactoring.guru/pt-br/design-patterns/factory-method/typescript/example
+
+# Execução
+
+Para executar o código implementado, acesse o diretório criacional e execute o comando:
+
+npx tsx factory-method.ts
+
+A saída esperada é semelhante à seguinte:
+
+Venda de tênis:
+Cliente: Realizando pedido...
+Nike: Venda realizada com sucesso -> Tênis Nike Air Max
+
+Venda de camiseta:
+Cliente: Realizando pedido...
+Nike: Venda realizada com sucesso -> Camiseta Nike Dri-FIT
+
+Venda de shorts:
+Cliente: Realizando pedido...
+Nike: Venda realizada com sucesso -> Shorts Nike Dri-FIT
+
+# Conclusão
+
+Como visto na execução do programa, diferentes tipos de produtos podem ser criados por meio de fábricas específicas, sem que o código cliente precise conhecer os detalhes de implementação de cada produto.
+
+Dessa forma, foi possível demonstrar o funcionamento do padrão Factory Method, no qual a responsabilidade de criação dos objetos é delegada para classes fábricas, tornando o sistema mais organizado, flexível e fácil de manter.
